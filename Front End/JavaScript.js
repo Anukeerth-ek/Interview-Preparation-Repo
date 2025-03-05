@@ -176,3 +176,32 @@
 
 // console.log("After", userDetails)
 // _________________________________________________________________
+
+// 11. What is Local Storage?
+// ans: Local storage in javascript is a web storage object that will allow us to store key-value of the data locally in the user's browser. It will persiste
+// even if we close the browser and reopened it. Unlike the session storage which will last for the duration of a single browser session. 
+
+// * Methods of Local Storage
+// -----------------------------
+// 1. localStorage.setItem(key, value) = store the data to localstorage.
+// 2. localStorage.getItem(key) = Retrieve item from the localstorage.
+// 3. localStorge.removeItem(key) = Delete a item from the localstorage.
+// 4. localStorage.clear() = Delete all items from the localstorage.
+// 5. localStorage.length() = Recieve the length of the stored data.
+// 6. localStorage.key(index) = Recieve the value of the specific index.
+
+// SAMPLE EXAMPLE
+
+// const userDetails = {
+//     name: "Kevin",
+//     age: 12
+// }
+// const { LocalStorage } = require('node-localstorage');
+// // Initialize localStorage with the folder name "mystorage"
+// const localStorage = new LocalStorage('./mystorage');
+
+// localStorage.setItem('userDetails', JSON.stringify(userDetails))
+// console.log(localStorage.getItem('userDetails'))
+// _________________________________________________________________
+
+// _________________________________________________________________
