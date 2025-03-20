@@ -205,3 +205,72 @@
 // _________________________________________________________________
 
 // _________________________________________________________________
+
+// What is Hoisting?
+// Hoisting is a JavaScript mechanism where **variable and function declarations** are moved to the top of their containing scope **during the 
+// compilation phase**. However, only the declarations are hoisted, not the initializations.
+
+// ---
+
+// ## 🚀 Hoisting Behavior
+
+// ### 1. **Variable Hoisting**
+
+// #### 🔥 `var` Hoisting
+// - Declarations are hoisted and initialized with `undefined`.
+// - **Example:**
+
+
+// console.log(a);    // Output: undefined
+// var a = 10;
+// console.log(a);    // Output: 10
+
+// ✅ Function Declarations
+// Fully hoisted (can be called before declaration).
+
+// greet();  
+// function greet() {
+//     console.log("Hello!");
+// }
+// ⚠️ Function Expressions
+// Variable hoisted but not the function.
+
+// console.log(sum);    // undefined  
+// var sum = function(a, b) {
+//     return a + b;
+// };
+// console.log(sum(2, 3));    // 5  
+// 🚫 Arrow Functions
+// Hoisted but not initialized → ReferenceError.
+
+// console.log(add(2, 3));    // ReferenceError  
+// const add = (a, b) => a + b;  
+// 🛑 Class Hoisting
+// Hoisted but not initialized → ReferenceError.
+
+// const obj = new Person();    // ReferenceError  
+// class Person {
+//     constructor(name) {
+//         this.name = name;
+//     }
+// }
+// ⚠️ Common Pitfalls
+// Accessing let or const before initialization → ReferenceError.
+// Expecting function expressions to be fully hoisted.
+// Using arrow functions before declaration → ReferenceError.
+// 🛠️ Best Practices
+// ✅ Use let and const instead of var.
+// ✅ Declare variables at the top of the scope.
+// ✅ Use function declarations when hoisting is required.
+// ✅ Use strict mode to catch undeclared variables.
+
+// 💡 Key Takeaways
+// var: Hoisted → undefined.
+// let and const: Hoisted but not initialized → ReferenceError.
+// Functions:
+// Declarations → Fully hoisted.
+// Expressions & Arrow → Hoisted but not initialized.
+// Classes: Hoisted but uninitialized → ReferenceError
+// _________________________________________________________________
+
+// _________________________________________________________________
