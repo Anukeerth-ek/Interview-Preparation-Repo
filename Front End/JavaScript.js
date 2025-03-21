@@ -86,7 +86,7 @@
 // const innerFunction = returnUserName("Kevin");
 // innerFunction();
 
-// A closure is a function in JavaScript that "remembers" its lexical scope, even when the function is executed outside that scope. In simpler terms, a closure allows an inner function 
+// A closure is a function in JavaScript that "remembers" its lexical scope, even when the function is executed outside that scope. In simpler terms, a closure allows an inner function
 // to retain access to variables from its outer (enclosing) function, even after the outer function has finished executing.
 
 // Closures are created every time a function is defined, and they are a natural part of JavaScript's function scope behavior.
@@ -94,16 +94,15 @@
 
 // _________________________________________________________________
 // 8. What is Map and filter in function in js?
-// ans: Map function is used to manipulate or iterate an array element. Map will return new array after iterating/manipulating. And map does not change the original array. 
+// ans: Map function is used to manipulate or iterate an array element. Map will return new array after iterating/manipulating. And map does not change the original array.
 
 // Filter is return the value if that value has successfully pass the condition
 
 // const userNamesData = ["Kevin", "John", "Devin", "Peter"]
-// // return the names 
+// // return the names
 
 // const userNames = userNamesData.map((name)=> `The teams members ${name}`)
 // console.log(userNames)
-
 
 // const userData = [
 //     {
@@ -133,10 +132,10 @@
 // _________________________________________________________________
 // 9. What is Object.freeze()?
 // ans:
-// Consider we have an Object that should not be changed if we unknowingly assign a new value to that. It will change that value right. There comes the JavaScript property 
+// Consider we have an Object that should not be changed if we unknowingly assign a new value to that. It will change that value right. There comes the JavaScript property
 // Object.freeze()
 
-// By using Object.freeze() we can't modify or add new values to that Object. 
+// By using Object.freeze() we can't modify or add new values to that Object.
 
 // Means this will the Object immutable.
 
@@ -144,7 +143,6 @@
 //     name: "kevin",
 //     age: '12'
 // }
-
 
 // Object.freeze(userDetails)
 // console.log("Before", userDetails)  // { name: 'kevin', age: '12' }
@@ -179,7 +177,7 @@
 
 // 11. What is Local Storage?
 // ans: Local storage in javascript is a web storage object that will allow us to store key-value of the data locally in the user's browser. It will persiste
-// even if we close the browser and reopened it. Unlike the session storage which will last for the duration of a single browser session. 
+// even if we close the browser and reopened it. Unlike the session storage which will last for the duration of a single browser session.
 
 // * Methods of Local Storage
 // -----------------------------
@@ -207,7 +205,7 @@
 // _________________________________________________________________
 
 // What is Hoisting?
-// Hoisting is a JavaScript mechanism where **variable and function declarations** are moved to the top of their containing scope **during the 
+// Hoisting is a JavaScript mechanism where **variable and function declarations** are moved to the top of their containing scope **during the
 // compilation phase**. However, only the declarations are hoisted, not the initializations.
 
 // ---
@@ -220,7 +218,6 @@
 // - Declarations are hoisted and initialized with `undefined`.
 // - **Example:**
 
-
 // console.log(a);    // Output: undefined
 // var a = 10;
 // console.log(a);    // Output: 10
@@ -228,27 +225,27 @@
 // ✅ Function Declarations
 // Fully hoisted (can be called before declaration).
 
-// greet();  
+// greet();
 // function greet() {
 //     console.log("Hello!");
 // }
 // ⚠️ Function Expressions
 // Variable hoisted but not the function.
 
-// console.log(sum);    // undefined  
+// console.log(sum);    // undefined
 // var sum = function(a, b) {
 //     return a + b;
 // };
-// console.log(sum(2, 3));    // 5  
+// console.log(sum(2, 3));    // 5
 // 🚫 Arrow Functions
 // Hoisted but not initialized → ReferenceError.
 
-// console.log(add(2, 3));    // ReferenceError  
-// const add = (a, b) => a + b;  
+// console.log(add(2, 3));    // ReferenceError
+// const add = (a, b) => a + b;
 // 🛑 Class Hoisting
 // Hoisted but not initialized → ReferenceError.
 
-// const obj = new Person();    // ReferenceError  
+// const obj = new Person();    // ReferenceError
 // class Person {
 //     constructor(name) {
 //         this.name = name;
@@ -273,4 +270,37 @@
 // Classes: Hoisted but uninitialized → ReferenceError
 // _________________________________________________________________
 
+// _________________________________________________________________
+
+// Callback
+
+// const orderFood = (food) => {
+//      console.log("Ordering the food");
+
+//      setTimeout(() => {
+//           console.log("Food has been delivered");
+//           setTimeout(()=> food("Burger"), 2000)
+//      }, 2000);
+// };
+
+// orderFood((food) => {
+//      console.log(`Enjoying my favourite ${food}`);
+// });
+
+// _________________________________________________________________
+
+// ✅ 1️⃣ Delay Execution (Timeout Simulation)
+// Write a function delay that takes a callback and a delay time in milliseconds.
+
+// It should execute the callback after the specified delay.
+
+// ans:
+// function delay(callback, time) {
+//      setTimeout(()=> callback(), time, time);
+// }
+
+// console.log("Start");
+// delay(() => {
+//      console.log("Hello after 2 seconds!");
+// }, 2000);
 // _________________________________________________________________
