@@ -204,7 +204,7 @@
 
 // _________________________________________________________________
 
-// What is Hoisting?
+// 12. What is Hoisting?
 // Hoisting is a JavaScript mechanism where **variable and function declarations** are moved to the top of their containing scope **during the
 // compilation phase**. However, only the declarations are hoisted, not the initializations.
 
@@ -272,7 +272,7 @@
 
 // _________________________________________________________________
 
-// Callback
+// 13. Callback
 
 // const orderFood = (food) => {
 //      console.log("Ordering the food");
@@ -287,7 +287,7 @@
 //      console.log(`Enjoying my favourite ${food}`);
 // });
 
-// _________________________________________________________________
+// ______________________________
 
 // ✅ 1️⃣ Delay Execution (Timeout Simulation)
 // Write a function delay that takes a callback and a delay time in milliseconds.
@@ -303,4 +303,44 @@
 // delay(() => {
 //      console.log("Hello after 2 seconds!");
 // }, 2000);
-// _________________________________________________________________
+// _________________________________
+
+// ✅ 2️⃣ Filter Array with Callback
+// Create a function filterArray() that takes:
+
+// An array
+// A callback function that defines the filtering condition
+// It should return a new array with only the elements that satisfy the condition.
+
+// function filterArray(arr, callback) {
+//     return arr.filter(callback)
+// }
+
+// const numbers = [1, 2, 3, 4, 5, 6, 7];
+
+// const evenNumbers = filterArray(numbers, (num) => num % 2 === 0);
+// console.log(evenNumbers);   // [2, 4, 6]
+
+// const oddNumbers = filterArray(numbers, (num) => num % 2 !== 0);
+// console.log(oddNumbers);    // [1, 3, 5, 7]
+
+// const numberGreaterThanFour = filterArray(numbers, (num) => num > 4);
+// console.log(numberGreaterThanFour);    // [5, 6, 7]
+
+//  Challenge: Try adding more conditions (e.g., num > 4).
+// _________________________________
+
+// ✅ 3️⃣ Create a Custom forEach()
+// Build your own version of the forEach() method using a callback.
+
+// function customForEach(arr, callback) {
+//      // console.log('arr', callback)
+// }
+
+// const numbers = [1, 2, 3, 4];
+
+// customForEach(numbers, (num, index) => {
+//      console.log(`Index ${index}: ${num}`);
+// });
+// console.log("hello world");
+// _________________________________
