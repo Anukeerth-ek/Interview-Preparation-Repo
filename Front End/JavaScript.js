@@ -344,3 +344,19 @@
 // });
 // console.log("hello world");
 // _________________________________
+
+// _________________________________
+// 17. 
+// what is this in js?
+// let name = "anu"
+// const obj = {
+//     name: 'Kevin',
+//     greet: function() {
+//         console.log("this is it", this.name)
+//     }
+// }
+
+// console.log(obj.greet())
+
+// Definition: this refers to the Object that is executing the current function
+// _________________________________
