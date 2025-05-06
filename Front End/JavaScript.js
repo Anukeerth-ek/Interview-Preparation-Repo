@@ -360,3 +360,33 @@
 
 // Definition: this refers to the Object that is executing the current function
 // _________________________________
+
+// _________________________________
+// 18. Closure?
+
+// const getUserName = (name)=> {
+//     console.log("outer", name) 
+
+//     return function outerFunction() {
+//         console.log("inner", name)
+//     }
+// }
+
+// getUserName("Kevin")()
+// _________________________________
+
+// _________________________________
+// 19. Hoisted
+// *  JavaScript hoists declarations to the top of the scope.
+// *  var declarations and functions declarations are hoisted.
+// *  let and const are hoisted by not initialised
+
+// console.log(name)
+// var name = "kevin"
+
+// So what will happen is if we are using var to declare a variable it will gets hoisted
+// and assign undefined to that so when we use that variable before declaration we will be getting undefined
+
+// So if we use let and const it will also get hoisted but it will through a reference error
+// that is the main problem
+// _________________________________
