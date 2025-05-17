@@ -390,3 +390,26 @@
 // So if we use let and const it will also get hoisted but it will through a reference error
 // that is the main problem
 // _________________________________
+
+// _________________________________
+// 20. Promise?
+// A Promise in JavaScript is an object that represents the eventual completion (or failure) of an asynchronous operation and its resulting value.
+// _________________________________
+
+// _________________________________
+// 21. What is the difference between the equality operators == and ===?
+// ans: 
+// The == operator is the loose equality operator. It compares two values after performing type coercion if the types are different. For example:
+
+// "3" == 3 // true, because the string "3" is converted to the number 3
+// The === operator is the strict equality operator. It checks both value and type without any type conversion. For example:
+
+// "3" === 3 // false, because one is a string and the other is a number
+// So:
+
+// == checks for equality after type conversion
+
+// === checks for equality without type conversion
+
+// 💡 Best practice: Use === by default to avoid unexpected behavior caused by implicit type coercion.
+// _________________________________

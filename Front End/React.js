@@ -79,7 +79,10 @@
 
 // _______________________________________________________________________________________
 // 7. What is React?
-// ans: React is a popular JavaScript library used for building user interfaces, especially single-page applications where you need a fast, interactive user experience. Developed and maintained by Facebook, React helps developers create reusable UI components that can efficiently update and render in response to data changes. One of the main advantage of react is single page application. In spa we dont need to load the content as per the request. Spa means when the website initially loads the server will pass the html and respective css and javascript code. And it will dynamically rewrite the content according to the user's requests.
+// ans: React is a popular JavaScript library used for building user interfaces, especially single-page applications where you need a fast, interactive user experience. Developed 
+// and maintained by Facebook, React helps developers create reusable UI components that can efficiently update and render in response to data changes. One of the main advantage of 
+// react is single page application. In spa we dont need to load the content as per the request. Spa means when the website initially loads the server will pass the html and 
+// respective css and javascript code. And it will dynamically rewrite the content according to the user's requests.
 // Main features in React is
 // 1. Components
 // 2. State
