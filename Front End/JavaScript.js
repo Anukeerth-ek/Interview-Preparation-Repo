@@ -346,7 +346,7 @@
 // _________________________________
 
 // _________________________________
-// 17. 
+// 17.
 // what is this in js?
 // let name = "anu"
 // const obj = {
@@ -365,7 +365,7 @@
 // 18. Closure?
 
 // const getUserName = (name)=> {
-//     console.log("outer", name) 
+//     console.log("outer", name)
 
 //     return function outerFunction() {
 //         console.log("inner", name)
@@ -398,7 +398,7 @@
 
 // _________________________________
 // 21. What is the difference between the equality operators == and ===?
-// ans: 
+// ans:
 // The == operator is the loose equality operator. It compares two values after performing type coercion if the types are different. For example:
 
 // "3" == 3 // true, because the string "3" is converted to the number 3
@@ -457,8 +457,8 @@
 
 // 23. What is the difference between the postfix i++ and prefix ++i increment operators?
 // ans:
-// Both of them are used to increment the value, and if we are using i++ we are first assigning and then incrementing the value of i by 1, and if we are using ++i we are first 
-// incrementing and then assigning that to the value i, 
+// Both of them are used to increment the value, and if we are using i++ we are first assigning and then incrementing the value of i by 1, and if we are using ++i we are first
+// incrementing and then assigning that to the value i,
 // _________________________________
 
 // _________________________________
@@ -470,6 +470,39 @@
 // fulfilled: meaning that the operation completed successfully.
 // rejected: meaning that the operation failed.
 
-// A pending promise can either be fulfilled with a value, or rejected with a reason (error). When either of these options happens, the associated handlers queued up by a promise's 
+// A pending promise can either be fulfilled with a value, or rejected with a reason (error). When either of these options happens, the associated handlers queued up by a promise's
 // then method are called.
 // _________________________________
+
+// const addNumbersOuter = (num1=1, num2=2) => {
+//      console.log("outer", num1 + num2);
+//      let first = "hello";
+//      let second = num2;
+
+//      function addNumbersInner() {
+//           console.log("inner", first);
+//      }
+     
+//      console.log("this it too outer")
+//      return addNumbersInner;
+// };
+
+// console.log("caling", addNumbersOuter(5, 4))
+// const result = addNumbersOuter()
+// console.log("again",  result())
+
+// _________________________________
+
+// CLOSURE MINI TASK
+
+// function greetUser(name) {
+  
+//      return ()=> {
+//           console.log(`Hello ${name}`)
+//      }
+// }
+
+// const greet = greetUser("Kevin");
+// greet(); 
+// greet(); 
+// greet(); 
