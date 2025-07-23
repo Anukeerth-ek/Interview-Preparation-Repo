@@ -482,7 +482,7 @@
 //      function addNumbersInner() {
 //           console.log("inner", first);
 //      }
-     
+
 //      console.log("this it too outer")
 //      return addNumbersInner;
 // };
@@ -496,13 +496,103 @@
 // CLOSURE MINI TASK
 
 // function greetUser(name) {
-  
+
 //      return ()=> {
 //           console.log(`Hello ${name}`)
 //      }
 // }
 
 // const greet = greetUser("Kevin");
-// greet(); 
-// greet(); 
-// greet(); 
+// greet();
+// greet();
+// greet();
+
+// _________________________________
+// Challenge 1: Create a Private Counter
+// const createCounter = () => {
+//      let number = 0;
+
+//      return {
+//           increment: function () {
+//                number = number+1;
+//                console.log(number)
+//           },
+//           getCount: function () {
+//                // console.log(number)
+//                return number;
+//           },
+//      };
+// };
+// const counter = createCounter();
+// counter.increment(); // 1
+// counter.increment(); // 2
+// console.log(counter.getCount()); // 2
+// _________________________________
+
+// _________________________________
+
+// const createGreeter = (greet)=> {
+//      return (name)=> {
+//           console.log(`${greet} ${name}`)
+//      }
+// }
+
+// const sayHi = createGreeter("Hi");
+// sayHi("Kevin"); // "Hi Kevin"
+// sayHi("Alex");  // "Hi Alex"
+
+// _________________________________
+
+// _________________________________
+
+// const onceLogger = (msg) => {
+//      let isCalled = false;
+//      return () => {
+//           if(!isCalled) {
+//                console.log(msg);
+//                isCalled = true;
+//           }
+//      };
+// };
+
+// const logOnce = onceLogger("This runs once!");
+// logOnce(); // logs
+// logOnce(); // nothing
+// logOnce(); // nothing
+// _________________________________;
+
+// _________________________________
+
+// const add = (num1)=> {
+
+//      return (num2)=> {
+//           return num1 + num2
+//      }
+// }
+
+// const add5 = add(5);
+// console.log(add5(10)); // 15
+// _________________________________
+
+// _________________________________
+
+// const createCountdown = (number) => {
+//      // console.log("outer")
+//      return () => {
+//           // console.log("inner")
+//           if (number <= 0)  {
+//                console.log(0)
+//           }
+//           else {
+//                console.log(number--);
+//           }
+//      };
+// };
+
+// const countdown = createCountdown(3);
+// countdown(); // 3
+// countdown(); // 2
+// countdown(); // 1
+// countdown(); // 0
+// countdown(); // 0
+// _________________________________
