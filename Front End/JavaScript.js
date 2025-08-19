@@ -596,3 +596,59 @@
 // countdown(); // 0
 // countdown(); // 0
 // _________________________________
+
+// _________________________________
+// Basic Promise Learning
+// let promise = new Promise((resolve, reject)=> {
+//      let result = true;
+
+//      if(result) {
+//           resolve("Successfully filled")
+//      }
+//      else {
+//           reject("Not success")
+//      }
+// })
+
+// promise.then((message)=> console.log(message)).catch((error)=> console.error(error))
+// console.log("Promise", promise)
+// _________________________________
+
+// _________________________________
+// Create a Promise that waits 2 seconds, then resolves with the message "Hello after 2 seconds!". (Hint: use setTimeout)
+
+// const handleDelayPromise = () => {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//      let marks = Math.random()* 50 + 10
+//       if(marks > 0.5) {
+//           resolve("Hello after 2 seconds!");
+//       }
+//       else {
+//           reject("Something went wrong");
+//       }
+//     }, 2000);
+  
+//   });
+  
+// };
+
+// console.log("Started");
+
+// const result = handleDelayPromise()
+// result.then(message => console.log(message)).catch(error => console.error(error))
+
+// _________________________________
+// What is Debouncing in JavaScript?
+// ans:
+// What is Debouncing in JavaScript?
+// Debouncing is a smart way to handle events that fire repeatedly within a short time, such as typing in a search box or resizing a window.Instead of executing a function every
+// single time the event is triggered, debouncing ensures the function runs only after the event stops firing for a specified time.
+
+// Why is it important?
+// It prevents performance bottlenecks by reducing the number of unnecessary function calls, making your app smoother and more efficient.
+
+// _________________________________
+
+// _________________________________
+
