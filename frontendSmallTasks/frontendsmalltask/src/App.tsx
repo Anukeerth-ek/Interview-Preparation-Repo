@@ -1,8 +1,14 @@
 import "./App.css";
-import LearningUseReducer from "./components/LearningUserReducer";
+import FormInputReducer from "./components/FormInputReducer";
+// import LearningUseReducer from "./components/LearningUserReducer";
 
 function App() {
-     return <LearningUseReducer />;
+     return (
+          <>
+               {/* <LearningUseReducer /> */}
+               <FormInputReducer />
+          </>
+     );
 }
 
 export default App;
