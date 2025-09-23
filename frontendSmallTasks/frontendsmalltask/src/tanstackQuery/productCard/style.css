@@ -1,0 +1,13 @@
+.post-card {
+     display: grid;
+     grid-template-columns: repeat(4, 2fr);
+     gap: 1.5rem;
+}
+
+.post-card > div {
+     background-color: gray;
+
+     img {
+          width: 240px;
+     }
+}
