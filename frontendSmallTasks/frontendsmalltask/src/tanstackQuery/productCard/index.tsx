@@ -1,5 +1,7 @@
 import { useQuery } from "@tanstack/react-query";
 import "./style.css";
+import { useEffect, useState } from "react";
+
 interface Post {
      id: number;
      title: string;
@@ -12,6 +14,9 @@ interface ProductResponse {
 }
 
 const ProductCard = () => {
+     const limit = 5;
+
+     const [start, setStart] = useState(0)
      const { data, isLoading, error } = useQuery<ProductResponse>({
           queryKey: ["product"],
           queryFn: async () => {
@@ -25,9 +30,21 @@ const ProductCard = () => {
           },
      });
 
+     useEffect(() => {
+          const observer = new IntersectionObserver((element) => {
+               
+                    const target = element[0];
+
+               if (target.isIntersecting) {
+                          
+                     }
+
+           }, {threshold: 1})
+     }, [])
+
      console.log("data", data);
-     if (isLoading) <p>Loading...</p>;
-     if (error) <p>{error.message}</p>;
+     if (isLoading) return <p>Loading...</p>;
+     if (error) return <p>{error.message}</p>;
 
      return (
           <div className="post-card">
